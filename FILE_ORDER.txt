@@ -1,0 +1,14 @@
+CSC102 project file order
+
+1. README.md
+2. boards.html
+3. code.js
+4. game.html
+5. index.html
+6. main.css
+7. meme.jpg
+
+Screenshots are not included because you said you will create your own:
+8. screenshot-boards.png
+9. screenshot-game.png
+10. screenshot-index.png

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+    CSC102 Creative JavaScript Game
+    Author: Evan Ketchum
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteor Dodge | CSC102</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Meteor Dodge</h1>
+        <p class="subtitle">Move your ship and avoid the falling meteors.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <h2>Navigation</h2>
+        <a href="index.html">Home</a>
+        <a href="boards.html">Boards</a>
+        <a href="game.html">Game</a>
+    </nav>
+
+    <main>
+        <section class="game-panel" aria-label="Meteor Dodge game">
+            <div class="game-controls">
+                <button id="startBtn" type="button">Start Game</button>
+                <button id="restartBtn" type="button" disabled>Restart</button>
+                <p><strong>Score:</strong> <span id="score">0</span> &nbsp; <strong>Lives:</strong> <span id="lives">3</span></p>
+            </div>
+
+            <div id="gameArea" tabindex="0" aria-label="Game area. Use the left and right arrow keys to move.">
+                <div id="player" aria-label="Player spaceship">▲</div>
+            </div>
+            <p id="resultArea" aria-live="polite">Press Start Game to begin.</p>
+            <p class="instructions">Use the <strong>left</strong> and <strong>right</strong> arrow keys to move. Avoid meteors to keep your three lives.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Evan Ketchum<br>
+        University of Advancing Technology<br>
+        13221 12th Avenue East<br>
+        Tacoma, Washington 98445</p>
+    </footer>
+</body>
+</html>

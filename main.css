@@ -1,0 +1,213 @@
+/* main.css - CSC102 Assignment 2.2: Using CSS in Webpages
+   Author: Evan Ketchum */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Base page colors and readable text */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #1a1a2e;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.55;
+}
+
+/* Centers the page header text */
+header {
+    padding: 24px 20px;
+    text-align: center;
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.subtitle {
+    margin: 5px 0 0;
+}
+
+/* Navigation menu positioned on the left on wide screens */
+nav {
+    float: left;
+    width: 200px;
+    min-height: 600px;
+    padding: 18px;
+    background-color: #d9e6f2;
+}
+
+nav h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+nav a {
+    display: block;
+    margin: 7px 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #1a1a2e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #60c6c0;
+}
+
+main {
+    margin-left: 220px;
+    max-width: 920px;
+    min-height: 520px;
+    padding: 30px;
+}
+
+/* Keeps the image centered inside the main content area */
+#memeImage {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    margin: 25px auto;
+}
+
+.computer-art {
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(26, 26, 46, 0.2);
+}
+
+.objectives {
+    max-width: 760px;
+    padding: 22px 22px 22px 42px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(26, 26, 46, 0.12);
+}
+
+.objectives li {
+    margin-bottom: 14px;
+}
+
+/* Centers footer text */
+footer {
+    clear: both;
+    padding: 18px;
+    text-align: center;
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Meteor Dodge game styles */
+.game-panel {
+    max-width: 680px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(26, 26, 46, 0.15);
+}
+
+.game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-bottom: 14px;
+}
+
+.game-controls p {
+    margin: 0;
+}
+
+button {
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+    background-color: #365b8c;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border: 4px solid #1a1a2e;
+    border-radius: 8px;
+    background: linear-gradient(#08162c, #173c68);
+}
+
+#player {
+    position: absolute;
+    bottom: 14px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    color: #60c6c0;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 0 8px #ffffff;
+    user-select: none;
+}
+
+.meteor {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffc57d, #9d3e20 55%, #4b1d18);
+    box-shadow: 0 0 7px rgba(255, 159, 67, 0.9);
+}
+
+#resultArea {
+    min-height: 26px;
+    margin: 12px 0 0;
+    font-weight: bold;
+}
+
+.instructions {
+    margin-bottom: 0;
+}
+
+/* Makes the layout usable on phones and narrow screens */
+@media (max-width: 700px) {
+    nav {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        padding: 10px 18px;
+    }
+
+    nav h2,
+    nav a {
+        display: inline-block;
+        margin: 4px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    #gameArea {
+        height: 330px;
+    }
+}
